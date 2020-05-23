@@ -78,8 +78,16 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
 
 <!-- Page content -->
 <div class="w3-main" style="margin-left:320px;">
-  <div id="top-bar" style="background-color:lightblue; align-items: center; height: 40px;">
-		<p style="text-align: right;">Hello, halo123@aucklanduni.ac.nz &emsp; &emsp; &emsp; <a style="color: blue"><u>Sign Out</u></a>&emsp;&emsp;</p>
+  <div id="top-bar" style="overflow:hidden"> <!--container for the serach bar-->
+    <div class="w3-margin-left w3-left w3-margin-top" style="width: 70%; height: 20px;" >
+      <div  style="width: 100%; box-sizing: border-box; border-radius: 4px; border: 2px solid #ccc;"> <!--Custom search box border-->
+        <input style="margin-left: 16px; width: 85%; min-width: 250px; border:none; outline:none;" type="text" name="search"  placeholder="Search in Nimbus"> <!--textfield-->
+        <button class="w3-right" style="cursor:pointer; border: none; background-color: white;" type="text" ><i class="fa fa-search"></i></button> <!--magnifying glass-->
+      </div>
+    </div>
+    <div class="w3-margin-right w3-right" style="height: 100%; margin-top: 8px;"> <!--container for UoA logo and user avatar-->
+      <img src="Assets/UoA_Logo.png" style="height: 40px;" alt="UoA logo">
+    </div>
 	</div>
   <i class="fa fa-bars w3-button w3-white w3-hide-large w3-xlarge w3-margin-left w3-margin-top" onclick="w3_open()"></i>
   <a href="javascript:void(0)" class="w3-hide-large w3-red w3-button w3-right w3-margin-top w3-margin-right" onclick="document.getElementById('id01').style.display='block'"><i class="fa fa-pencil"></i></a>
@@ -87,10 +95,6 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
 <div id="home" class="w3-container file">
   <br>
   <div id="Upcoming-Assignments" style="margin-left: 30px;">
-		<form action="#">
-		  <input type="text" placeholder="Search Files" style="width: 40%; height: 10%; padding: 14px">
-		  <input class="w3-button w3-light-blue" type="submit" value="Submit" style="width: 10%; font-size: 15pt;">
-		</form>
 		<h1>Upcoming Assignments</h1>
 	  	<div style="float: right; margin-right: 30px; "><a class="w3-button w3-light-blue" href="#" style="font-size: 20pt;">Upload File</a></div>
 	  	<table id="upcoming-as" style="width:50%; border: medium solid black;">
@@ -98,7 +102,7 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
 				<td style="text-align: left;"><h3>&emsp;<b><a style="color: red;">!</a> &emsp;COMPSCI345</b> Due 30/05/20 <i>(in 2 weeks)</i></h3></td>
 			</tr>
 			<tr style="border: medium solid black;">
-				<td style="text-align:"><h3>&emsp;<b><a style="color: red;">!</a> &emsp;COMPSCI373</b> Due 5/06/20 <i>(in 3 weeks</i>)</h3></td>
+				<td style="text-align: right"><h3>&emsp;<b><a style="color: red;">!</a> &emsp;COMPSCI373</b> Due 5/06/20 <i>(in 3 weeks</i>)</h3></td>
 			</tr>
 	  	</table>
 	  
