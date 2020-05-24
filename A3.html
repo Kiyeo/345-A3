@@ -78,7 +78,7 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
 
 <!-- Page content -->
 <div class="w3-main" style="margin-left:320px;">
-  <div id="top-bar" style="overflow:hidden"> <!--container for the search bar-->
+  <div id="top-bar" style="overflow:hidden;"> <!--container for the search bar-->
     <div class="w3-margin-left w3-left w3-margin-top" style="width: 70%;" >
       <div style="font-size: 20px; width: 100%; box-sizing: border-box; border-radius: 4px; border: 2px solid #ccc;"> <!--Custom search box border-->
         <input style="font-size: 20px; margin-left: 16px; width: 85%; min-width: 250px; border:none; outline:none;" type="text" name="search"  placeholder="Search in Nimbus"> <!--textfield-->
@@ -87,36 +87,37 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
     </div>
     <div class="w3-margin-right w3-right" style="height: 100%; margin-top: 4px;"> <!--container for UoA logo and user avatar-->
       <img src="Assets/UoA_Logo.png" style="height: 40px;" alt="UoA logo">
-      <div style="text-align: center; background-color:  lightblue; border-radius: 4px;">
+      <div style="text-align: center; border: solid #ccc 2px; border-radius: 4px; padding:5px;">
         L
       </div>
     </div>
 	</div>
   <i class="fa fa-bars w3-button w3-white w3-hide-large w3-xlarge w3-margin-left w3-margin-top" onclick="w3_open()"></i>
   <a href="javascript:void(0)" class="w3-hide-large w3-red w3-button w3-right w3-margin-top w3-margin-right" onclick="document.getElementById('id01').style.display='block'"><i class="fa fa-pencil"></i></a>
-
+	<br>
+	<div id="split-bar" style="background-color: #ccc; height: 3px; border-radius: 4px;"></div>
 <div id="home" class="w3-container file">
   <br>
   <div id="Upcoming-Assignments" style="margin-left: 30px;">
 		<h1>Upcoming Assignments</h1>
-	  	<div style="float: right; margin-right: 30px; "><a class="w3-button w3-light-blue" href="#" style="font-size: 20pt;">Upload File</a></div>
-	  	<table id="upcoming-as" style="width:50%; border: medium solid black;">
+	  	<div style="float: right; margin-right: 30px; "><a class="w3-button" href="#" style="font-size: 20pt; border: solid #ccc; border-radius: 4px;"><b>&#8613;</b>&emsp;Upload File</a></div>
+	  	<table id="upcoming-as" style="font-size: 20px; width: auto; box-sizing: border-box; border-radius: 4px; border: 2px solid #ccc; padding-right: 30px;">
 	  		<tr style="border: medium solid black;">
 				<td style="text-align: left;"><h3>&emsp;<b><a style="color: red;">!</a> &emsp;COMPSCI345</b> Due 30/05/20 <i>(in 2 weeks)</i></h3></td>
 			</tr>
 			<tr style="border: medium solid black;">
-				<td style="text-align: right"><h3>&emsp;<b><a style="color: red;">!</a> &emsp;COMPSCI373</b> Due 5/06/20 <i>(in 3 weeks</i>)</h3></td>
+				<td style="text-align: left"><h3>&emsp;<b><a style="color: red;">!</a> &emsp;COMPSCI373</b> Due 5/06/20 <i>(in 3 weeks</i>)</h3></td>
 			</tr>
 	  	</table>
 	  
 	<br>
 	</div>
-	<div id="split-bar" style="background-color: lightblue; height: 10px;"></div>
+	<div id="split-bar" style="background-color: #ccc; height: 3px; border-radius: 4px;"></div>
 	<div id="Uploaded-files" style="margin-left: 30px;">
-		<div style="float: right; margin-right: 30px; "><a class="w3-button w3-light-blue" href="#" style="font-size: 11pt;">Create File Group</a></div>
+		<div style="float: right; margin-right: 30px; "><a class="w3-button" href="#" style="font-size: 11pt; border: solid #ccc; border-radius: 4px;"><b>+&emsp;</b>  Create File Group</a></div>
     <h1>Uploaded Files</h1>
-    <h3>File Group: <a style="color: blue"><u>COMPSCI345</u></a>&emsp;&emsp;&emsp;Due Date: 30/05/20&emsp;&emsp;&emsp;Now
-      <img src="Assets/progress1.png" style="width:15%;"/>Due</h3>
+    <h3>File Group: <a style="color: blue"><u>COMPSCI345</u></a>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Started: 01/05/20
+      <img src="Assets/progress1.png" style="width:15%;"/>Due Date: 30/05/20 <i>(In 2 weeks)</i></h3>
 		<div>
       <figure>
         <img class="w3-button w3-border w3-round  w3-animate-top" src="Assets/folder_image.jfif" style="width:14.3%;">
@@ -127,8 +128,8 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
       </figure>
 		</div> 
 		<br>
-    <h3>File Group: <a style="color: blue"><u>COMPSCI373</u></a>&emsp;&emsp;&emsp;Due Date: 30/05/20&emsp;&emsp;&emsp;Now 
-      <img src="Assets/progress2.png" style="width:14.8%;"/>Due</h3>
+    <h3>File Group: <a style="color: blue"><u>COMPSCI373</u></a>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Started: 01/05/20
+      <img src="Assets/progress2.png" style="width:14.8%;"/>Due Date: 05/06/20 <i>(In 3 weeks)</i></h3>
 		<div>
       <figure>
 			  <img class="w3-button w3-border w3-round  w3-animate-top" src="Assets/folder_image.jfif" style="width:14.3%;">
@@ -137,6 +138,17 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
         <figcaption style="font-size:1vw;">&emsp;&emsp;Assignment1&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Presentation&emsp;&emsp;&emsp;&emsp;&emsp;Assignment Handout</figcaption>
       </figure>
     </div>
+	<br>
+  </div>
+  <div id="split-bar" style="background-color: #ccc; padding: 5px; border-radius: 4px;">
+	  <div style="margin-left: 25px; margin-right: 25px;">
+		  <table style="width: 100%;">
+		  	<tr>
+			  <td><p><b>Storage Space Used: 1% (22MB/15GB)</b></p>	</td>
+			  <td><p style="text-align: right;">Nimbus Cloud All Rights Reserved 2020</p></td>
+			</tr>
+		  </table>
+	  </div>
   </div>
 </div>
 
