@@ -69,12 +69,22 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
       <input class="w3-input w3-border w3-margin-bottom" type="text">
       <label>File Group:</label>
       <form action="/action_page.php">
-        <input type="radio" id="345" name="class" value="345">
-        <label for="345"><a class="w3-bar-item w3-light-grey w3-button">Compsci345</a></label>
-        <input type="radio" id="373" name="class" value="373">
-        <label for="373"><a class="w3-bar-item w3-light-grey w3-button">Compsci373</a></label>
-        <input type="radio" id="all" name="class" value="all">
-        <label for="all"><a class="w3-bar-item w3-light-grey w3-button">Everything</a></label>
+
+        <input id=btnRadio1 type="radio" name="control" checked="checked">
+        <label class="w3-bar-item w3-button" for="btnRadio1">
+          <a>Compsci345</a>
+        </label>
+
+        <input id=btnRadio2 type="radio" name="control">
+        <label class="w3-bar-item w3-button" for="btnRadio2">
+          
+          <a>Compsci373</a>
+        </label>
+        
+        <input id=btnRadio3 type="radio" name="control">
+        <label class="w3-bar-item w3-button" for="btnRadio3">
+          <a >Everything</a>
+        </label>
       </form>
       <input class="w3-input w3-border w3-margin-bottom" style="height:150px" placeholder="Message">
       <div class="w3-section">
@@ -230,7 +240,32 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
      
 </div>
 
+<style>
+#btnRadio1 {
+    display: none;
+}
+#btnRadio2 {
+    display: none;
+}
+#btnRadio3 {
+    display: none;
+}
+#btnRadio1:checked + label
+{
+  background-color: lightgrey;
+}
+#btnRadio2:checked + label
+{
+  background-color: lightgrey;
+}
+#btnRadio3:checked + label
+{
+  background-color: lightgrey;
+}
+</style>
+
 <script>
+
 var openInbox = document.getElementById("myBtn");
 openInbox.click();
 
@@ -275,6 +310,22 @@ function doShare(fileName) {
 <script>
 var openTab = document.getElementById("firstTab");
 openTab.click();
+
+function show345() 
+{
+  document.getElementById("btnRadio1").checked = true;
+}
+
+function show373() 
+{
+  document.getElementById("btnRadio1").checked = true;
+  
+}
+
+function showAll() 
+{
+  document.getElementById("btnRadio1").checked = true;
+}
 </script>
 
 </body>
