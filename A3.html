@@ -63,12 +63,29 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
       <h2>Share File</h2>
     </div>
     <div class="w3-panel">
-      <label>To</label>
+      <label>To:</label>
       <input class="w3-input w3-border w3-margin-bottom" type="text">
-      <label>From</label>
+      <label>From:</label>
       <input class="w3-input w3-border w3-margin-bottom" type="text">
-      <label>File</label>
-      <input class="w3-input w3-border w3-margin-bottom" type="text">
+      <label>File Group:</label>
+      <form action="/action_page.php">
+
+        <input id=btnRadio1 type="radio" name="control" checked="checked">
+        <label class="w3-bar-item w3-button" for="btnRadio1">
+          <a>Compsci345</a>
+        </label>
+
+        <input id=btnRadio2 type="radio" name="control">
+        <label class="w3-bar-item w3-button" for="btnRadio2">
+          
+          <a>Compsci373</a>
+        </label>
+        
+        <input id=btnRadio3 type="radio" name="control">
+        <label class="w3-bar-item w3-button" for="btnRadio3">
+          <a >Everything</a>
+        </label>
+      </form>
       <input class="w3-input w3-border w3-margin-bottom" style="height:150px" placeholder="Message">
       <div class="w3-section">
         <a class="w3-button w3-red" onclick="document.getElementById('id01').style.display='none'">Cancel  <i class="fa fa-remove"></i></a>
@@ -223,7 +240,32 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
      
 </div>
 
+<style>
+#btnRadio1 {
+    display: none;
+}
+#btnRadio2 {
+    display: none;
+}
+#btnRadio3 {
+    display: none;
+}
+#btnRadio1:checked + label
+{
+  background-color: lightgrey;
+}
+#btnRadio2:checked + label
+{
+  background-color: lightgrey;
+}
+#btnRadio3:checked + label
+{
+  background-color: lightgrey;
+}
+</style>
+
 <script>
+
 var openInbox = document.getElementById("myBtn");
 openInbox.click();
 
