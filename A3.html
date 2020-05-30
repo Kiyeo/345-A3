@@ -22,7 +22,7 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
     <i class="fa fa-home w3-margin-right"></i>
     Home
   </a>
-  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-dark-grey w3-button w3-hover-black w3-left-align" onclick="document.getElementById('id01').style.display='block'">Share File <i class="w3-padding fa fa-pencil"></i></a>
+  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-dark-grey w3-button w3-hover-black w3-left-align" onclick="document.getElementById('id01').style.display='block'; document.getElementById('shareFile').style.display='block'">Share File <i class="w3-padding fa fa-pencil"></i></a>
   <a id="myBtn" onclick="myFunc('Demo1')" href="javascript:void(0)" class="w3-bar-item w3-button"><i class="fa fa-inbox w3-margin-right"></i>Recent Files (3)<i class="fa fa-caret-down w3-margin-left"></i></a>
   <div id="Demo1" class="w3-hide w3-animate-left"></a>
     <a href="javascript:void(0)" class="w3-bar-item w3-button w3-border-bottom test w3-hover-light-grey" onclick="doShare('File1');w3_close();">
@@ -56,7 +56,7 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
 
 <!-- Modal that pops up when you click on "Share File" -->
 <div id="id01" class="w3-modal" style="z-index:4">
-  <div class="w3-modal-content w3-animate-zoom" style="border-radius: 4px;">
+  <div id="shareFile" class="w3-modal-content w3-animate-left" style="border-radius: 4px;">
     <div class="w3-container w3-padding w3-red" style="border-radius: 4px 4px 0px 0px;">
       <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-red w3-right w3-xxlarge" style="border-radius: 2px;" >
         <i class="fa fa-remove"></i>
@@ -89,28 +89,31 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
       </form>
       <textarea class="w3-input w3-border w3-margin-bottom" style="height:150px; border-radius: 0px 4px 4px 4px; resize: none;" placeholder="Message"></textarea>
       <div class="w3-section">
-        <a class="w3-button w3-red" onclick="document.getElementById('id01').style.display='none'" style="border-radius: 4px;">Cancel  <i class="fa fa-remove"></i></a>
-        <a class="w3-button w3-light-grey w3-right" onclick="document.getElementById('id02').style.display='block'" style="border-radius: 4px;">Share  <i class="fa fa-paper-plane"></i></a> 
+        <a class="w3-button w3-red" onclick="document.getElementById('id01').style.display='none';" style="border-radius: 4px;">Cancel  <i class="fa fa-remove"></i></a>
+        <a class="w3-button w3-light-grey w3-right" onclick="document.getElementById('shareFile').className =
+        document.getElementById('shareFile').className.replace(' w3-animate-left', ' share-file-fade-right'); displayDelay()" style="border-radius: 4px;">Share  <i class="fa fa-paper-plane"></i></a> 
       </div>    
     </div>
   </div>
 </div>
 
+<!--confirmation pop up when clicking on Share in the Share file modal-->
 <div id="id02" class="w3-modal" style="z-index:4">
   <div class="w3-modal-content w3-animate-zoom" style="border-radius: 4px; width: 30%; ">
-    <div class="w3-container w3-padding w3-green" style="border-top-left-radius: 4px; border-top-right-radius: 4px;">
+    <!-- <div class="w3-container w3-padding w3-green" style="border-top-left-radius: 4px; border-top-right-radius: 4px;">
        <span onclick="document.getElementById('id02').style.display='none'; document.getElementById('id01').style.display='none'"
        class="w3-button w3-right w3-xxlarge" style="border-radius: 2px;"><i class="fa fa-remove"></i></span>
       <h2>Sucessfully Shared!</h2>
-    </div>
+    </div> -->
     <div class="w3-panel" style="text-align: center;">
 		<br>
       <img src="Assets/Green Tick.svg" class="w3-margin-top" style="width: 20%;"/>
 	    <br>
 		<br>
-      <h3>Your file has been shared sucessfully</h3>
+      <h3>Your file has been shared successfully</h3>
 	  <br>
-	  <a class="w3-button w3-light-grey w3-margin-bottom" style="border-radius: 4px; width: 70px; font-size: 14pt;" onclick="document.getElementById('id02').style.display='none'; document.getElementById('id01').style.display='none';" >OK</a>
+	  <a class="w3-button w3-light-grey w3-margin-bottom" style="border-radius: 4px; width: 70px; font-size: 14pt;" onclick="document.getElementById('id02').style.display='none'; document.getElementById('id01').style.display='none'; document.getElementById('shareFile').className =
+    document.getElementById('shareFile').className.replace(' share-file-fade-right', ' w3-animate-left');" >OK</a>
     </div>
   </div>
 </div>
@@ -295,6 +298,23 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
 {
   background-color: lightgrey;
 }
+
+.share-file-fade-right
+{
+  position:relative;
+  animation:animateright 0.4s
+}
+@keyframes animateright
+{
+  from
+  {
+    right:0px;opacity:1
+  } 
+  to
+  {
+    right:-300px;opacity:0
+  }
+}
 </style>
 
 <script>
@@ -336,6 +356,13 @@ function doShare(fileName) {
   }
   document.getElementById(fileName).style.display = "block";
   event.currentTarget.className += " w3-light-grey";
+}
+
+function displayDelay() {
+  setTimeout(function() {
+    document.getElementById('shareFile').style.display='none'
+      document.getElementById('id02').style.display='block'
+    }, 350);
 }
 </script>
 
