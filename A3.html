@@ -91,8 +91,8 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
           <a >All Groups</a>
         </label>
 		  
-		<input id=btnRadio3 type="radio" name="control">
-        <label class="w3-bar-item w3-button" style="border-radius: 2px 2px 2px 2px;" for="btnRadio3">
+		<input id=btnRadio4 type="radio" name="control">
+        <label class="w3-bar-item w3-button" style="border-radius: 2px 2px 2px 2px;" for="btnRadio4">
           <a >None</a>
         </label>
       </form>
@@ -101,13 +101,13 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
 	  <form>
 		<input type="radio" name="control" checked="checked" id="option1">
 		  <label for="option1">Shared users can edit these files</label><br>
-		<input type="radio" name="control" checked="checked" id="option1">
+		<input type="radio" name="control" checked="checked" id="option2">
 		  <label for="option2">Shared users can only view these files (read-only)</label>
 		</input><br><br>
-		<input type="checkbox" id="tracked" name="C1">
-		<label for="tracked">Alert me of any tracked changes</label><br>
-		<input type="checkbox" id="tracked" name="C2">
-		<label for="tracked">Notify if someone opens a file</label><br>
+		<input type="checkbox" id="c1" name="C1">
+		<label for="c1">Alert me of any tracked changes</label><br>
+		<input type="checkbox" id="c2" name="C2">
+		<label for="c2">Notify if someone opens a file</label><br>
 	  </form>
       <div class="w3-section">
         <a class="w3-button w3-light-grey" onclick="document.getElementById('id01').style.display='none';" style="border-radius: 4px;">Cancel  <i class="fa fa-remove"></i></a>
@@ -307,6 +307,9 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
 #btnRadio3 {
     display: none;
 }
+#btnRadio4 {
+    display: none;
+}
 #btnRadio1:checked + label
 {
   background-color: lightgrey;
@@ -319,7 +322,10 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
 {
   background-color: lightgrey;
 }
-
+#btnRadio4:checked + label
+{
+  background-color: lightgrey;
+}
 .share-file-fade-right
 {
   position:relative;
