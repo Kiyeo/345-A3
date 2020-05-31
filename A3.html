@@ -23,7 +23,7 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
     Home
   </a>
   <a href="javascript:void(0)" class="w3-bar-item w3-dark-grey w3-button w3-hover-black w3-left-align" onclick="document.getElementById('id01').style.display='block'; document.getElementById('shareFile').style.display='block'">Share File <i class="w3-padding fa fa-pencil"></i></a>
-  <a id="myBtn" onclick="myFunc('Demo1')" href="javascript:void(0)" class="w3-bar-item hover-light-grey"><i class="fa fa-inbox w3-margin-right"></i>Recent Files (3)<i class="fa fa-caret-down w3-margin-left"></i></a>
+  <a id="myBtn" onclick="doShare('Demo1')" href="javascript:void(0)" class="w3-bar-item test hover-light-grey"><i class="fa fa-inbox w3-margin-right"></i>Recent Files (3)<i class="fa fa-caret-down w3-margin-left"></i></a>
   <div id="Demo1" class="w3-hide w3-animate-left"></a>
     <a href="javascript:void(0)" class="w3-bar-item w3-border-bottom test hover-light-grey" onclick="doShare('File1');w3_close();">
       <div class="w3-container">
@@ -363,16 +363,20 @@ function w3_close() {
   document.getElementById("myOverlay").style.display = "none";
 }
 
-function myFunc(id) {
-  var x = document.getElementById(id);
+var x = document.getElementById('myBtn');
+x.addEventListener("click", myFunc);
+
+function myFunc() {
+  
+  var x = document.getElementById('Demo1');
   if (x.className.indexOf("w3-show") == -1) {
     x.className += " w3-show"; 
-    x.previousElementSibling.style.backgroundColor  = "#cac7c794";
-    x.previousElementSibling.style.fontWeight = "bold";
+    //x.previousElementSibling.style.backgroundColor  = "#cac7c794";
+    //x.previousElementSibling.style.fontWeight = "bold";
   } else { 
     x.className = x.className.replace(" w3-show", "");
-    x.previousElementSibling.style.backgroundColor = null;
-    x.previousElementSibling.style.fontWeight = null;
+    //x.previousElementSibling.style.backgroundColor = null;
+    //x.previousElementSibling.style.fontWeight = null;
   }
 }
 
