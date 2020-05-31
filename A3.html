@@ -76,23 +76,23 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
 	  <div style="height: 5px;"></div>
       <form action="/action_page.php">
         <input id=btnRadio1 type="radio" name="control">
-        <label class="w3-bar-item w3-button" style="border-radius: 2px 2px 2px 2px;" for="btnRadio1">
+        <label class="w3-bar-item w3-button hover-file-group-grey" style="border-radius: 2px 2px 2px 2px;" for="btnRadio1">
           <a>COMPSCI345</a>
         </label>
 
         <input id=btnRadio2 type="radio" name="control">
-        <label class="w3-bar-item w3-button" style="border-radius: 2px 2px 2px 2px;" for="btnRadio2">
+        <label class="w3-bar-item w3-button hover-file-group-grey" style="border-radius: 2px 2px 2px 2px;" for="btnRadio2">
           
           <a>COMPSCI373</a>
         </label>
         
         <input id=btnRadio3 type="radio" name="control">
-        <label class="w3-bar-item w3-button" style="border-radius: 2px 2px 2px 2px;" for="btnRadio3">
+        <label class="w3-bar-item w3-button hover-file-group-grey" style="border-radius: 2px 2px 2px 2px;" for="btnRadio3">
           <a >All Groups</a>
         </label>
 		  
 		    <input id=btnRadio4 type="radio" name="control" checked>
-        <label class="w3-bar-item w3-button" style="border-radius: 2px 2px 2px 2px;" for="btnRadio4">
+        <label class="w3-bar-item w3-button hover-file-group-grey" style="border-radius: 2px 2px 2px 2px;" for="btnRadio4">
           <a >None</a>
         </label>
       </form>
@@ -322,19 +322,27 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
 }
 #btnRadio1:checked + label
 {
-  background-color: lightgrey;
+  font-weight: bold;
+  color: rgb(3, 126, 248)!important;
+  background-color: #3297FD33!important;
 }
 #btnRadio2:checked + label
 {
-  background-color: lightgrey;
+  font-weight: bold;
+  color: rgb(3, 126, 248)!important;
+  background-color: #3297FD33!important;
 }
 #btnRadio3:checked + label
 {
-  background-color: lightgrey;
+  font-weight: bold;
+  color: rgb(3, 126, 248)!important;
+  background-color: #3297FD33!important;
 }
 #btnRadio4:checked + label
 {
-  background-color: lightgrey;
+  font-weight: bold;
+  color: rgb(3, 126, 248)!important;
+  background-color: #3297FD33!important;
 }
 .share-file-fade-right
 {
@@ -378,6 +386,11 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
 {
   color:#000;
   background-color:#f1f1f1;
+}
+.hover-file-group-grey:hover, .hover-file-group-gray:hover 
+{
+  color:#000 !important;
+  background-color:#f1f1f1 !important;
 }
 a
 {
