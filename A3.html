@@ -18,40 +18,40 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
   <img src="Assets/Logo.png" style="width:80%; margin-left: 40px; margin-bottom: 20px;"/> <!--Added logo and replaced the W3 thing-->
   <a href="javascript:void(0)" onclick="w3_close()" title="Close Sidemenu" 
   class="w3-bar-item w3-button w3-hide-large w3-large">Close <i class="fa fa-remove"></i></a>
-  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-border-bottom test w3-hover-light-grey" onclick="doShare('home');" id="firstTab">
+  <a href="javascript:void(0)" class="w3-bar-item w3-border-bottom test hover-light-grey" onclick="doShare('home');" id="firstTab">
     <i class="fa fa-home w3-margin-right"></i>
     Home
   </a>
-  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-dark-grey w3-button w3-hover-black w3-left-align" onclick="document.getElementById('id01').style.display='block'; document.getElementById('shareFile').style.display='block'">Share File <i class="w3-padding fa fa-pencil"></i></a>
-  <a id="myBtn" onclick="myFunc('Demo1')" href="javascript:void(0)" class="w3-bar-item w3-button"><i class="fa fa-inbox w3-margin-right"></i>Recent Files (3)<i class="fa fa-caret-down w3-margin-left"></i></a>
+  <a href="javascript:void(0)" class="w3-bar-item w3-dark-grey w3-button w3-hover-black w3-left-align" onclick="document.getElementById('id01').style.display='block'; document.getElementById('shareFile').style.display='block'">Share File <i class="w3-padding fa fa-pencil"></i></a>
+  <a id="myBtn" onclick="myFunc('Demo1')" href="javascript:void(0)" class="w3-bar-item hover-light-grey"><i class="fa fa-inbox w3-margin-right"></i>Recent Files (3)<i class="fa fa-caret-down w3-margin-left"></i></a>
   <div id="Demo1" class="w3-hide w3-animate-left"></a>
-    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-border-bottom test w3-hover-light-grey" onclick="doShare('File1');w3_close();">
+    <a href="javascript:void(0)" class="w3-bar-item w3-border-bottom test hover-light-grey" onclick="doShare('File1');w3_close();">
       <div class="w3-container">
-        <img class="w3-round w3-margin-right" src="Assets/word_image.png" style="width:15%;"><span class="w3-opacity w3-large">A3 Group 1.docx</span>
-        <h6>Created by: Leo Keo</h6>
+        <img class="w3-round w3-margin-right" src="Assets/word_image.png" style="width:15%;"><span class="w3-large">A3 Group 1.docx</span>
+        <p>Created by: Leo Keo</p>
         <p>Uploaded on: 02/05/20</p>
 		<p>Last Modified: 05/05/20</p>
       </div>
-     <a href="javascript:void(0)" class="w3-bar-item w3-button w3-border-bottom test w3-hover-light-grey" onclick="doShare('File2');w3_close();">
+     <a href="javascript:void(0)" class="w3-bar-item w3-border-bottom test hover-light-grey" onclick="doShare('File2');w3_close();">
       <div class="w3-container">
-        <img class="w3-round w3-margin-right" src="Assets/powerpoint_image.png" style="width:15%;"><span class="w3-opacity w3-large">Slides for Presentation.pptx</span>
-		  <h6>Created by: Kevin Gao</h6>
+        <img class="w3-round w3-margin-right" src="Assets/powerpoint_image.png" style="width:15%;"><span class="w3-large">Slides for Presentation.pptx</span>
+		  <p>Created by: Kevin Gao</p>
         <p>Uploaded on: 02/05/20</p>
 		<p>Last Modified: 02/05/20</p>
       </div>
     </a>
-    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-border-bottom test w3-hover-light-grey" onclick="doShare('File3');w3_close();">
+    <a href="javascript:void(0)" class="w3-bar-item w3-border-bottom test hover-light-grey" onclick="doShare('File3');w3_close();">
       <div class="w3-container">
-        <img class="w3-round w3-margin-right" src="Assets/html_image.png" style="width:15%;"><span class="w3-opacity w3-large">Work.html</span>
-        <h6>Created by: Raphael Lee</h6>
+        <img class="w3-round w3-margin-right" src="Assets/html_image.png" style="width:15%;"><span class="w3-large">Work.html</span>
+        <p>Created by: Raphael Lee</p>
         <p>Uploaded on: 02/05/20</p>
 		<p>Last Modified: 02/05/20</p>
       </div>
     </a>
   </div>
-  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-paper-plane w3-margin-right"></i>Shared Files</a>
-  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-hourglass-end w3-margin-right"></i>Draft Files</a>
-  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-trash w3-margin-right"></i>Trash</a>
+  <a href="#" class="w3-bar-item hover-light-grey"><i class="fa fa-paper-plane w3-margin-right"></i>Shared Files</a>
+  <a href="#" class="w3-bar-item hover-light-grey"><i class="fa fa-hourglass-end w3-margin-right"></i>Draft Files</a>
+  <a href="#" class="w3-bar-item hover-light-grey"><i class="fa fa-trash w3-margin-right"></i>Trash</a>
 </nav>
 
 <!-- Modal that pops up when you click on "Share File" -->
@@ -146,7 +146,7 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
   <br>
   <div id="Upcoming-Assignments" style="margin-left: 30px;">
 		<h1>Upcoming Assignments</h1>
-	  	<div style="float: right; margin-right: 30px; "><a class="w3-button" href="#" style="font-size: 20pt; border: solid #ccc; border-radius: 4px;"><b>&#8613;</b>&emsp;Upload File</a></div>
+	  	<div style="float: right; margin-right: 30px; "><a class="w3-button animate-right" href="#" style="font-size: 20pt; border: solid #ccc; border-radius: 4px;"><b>&#8613;</b>&emsp;Upload File</a></div>
 	  	<table id="upcoming-as" style="font-size: 20px; width: auto; box-sizing: border-box; border-radius: 4px; border: 2px solid #ccc; padding-right: 30px;">
 	  		<tr style="border: medium solid black;">
 				<td style="text-align: left;"><h3>&emsp;<b><a style="color: red;">!</a> &emsp;COMPSCI345</b> Due 30/05/20 <i>(in 2 weeks)</i></h3></td>
@@ -163,29 +163,29 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
   <br>
 	<div id="Uploaded-files" style="margin-left: 30px;">
     <div style="float: right; margin-right: 30px; ">
-    <a class="w3-button" href="#" style="font-size: 11pt; border: solid #ccc; border-radius: 4px;"><b>+&emsp;</b>  Create File Group</a></div>
+    <a class="w3-button animate-right" href="#" style="font-size: 11pt; border: solid #ccc; border-radius: 4px;"><b>+&emsp;</b>  Create File Group</a></div>
     <h1>Uploaded Files</h1>
     <h3>File Group:&emsp;<a class="w3-button" href="#" style="font-size: 20pt; border: solid #ccc; border-radius: 4px;">COMPSCI345</a>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Started: 01/05/20
       <img src="Assets/progress1.png" style="width:15%;"/>Due Date: 30/05/20 <i>(In 2 weeks)</i></h3>
 		<div style="display: flex" >
       <div style="text-align: center; max-width: 200px;">
-        <img class="w3-button w3-border w3-round  w3-animate-top" src="Assets/folder_image.png" style="width: 100%; height: auto;">
+        <img class="w3-button w3-border w3-round  w3-animate-zoom" src="Assets/folder_image.png" style="width: 100%; height: auto;">
         <p style="font-size: 125%">Assignment 1 Folder</p>
       </div>
        <div style="text-align: center; max-width: 200px; margin-left: 15px;">
-        <img class="w3-button w3-border w3-round  w3-animate-top" src="Assets/folder_image.png" style="width: 100%; height: auto;">
+        <img class="w3-button w3-border w3-round  w3-animate-zoom" src="Assets/folder_image.png" style="width: 100%; height: auto;">
         <p style="font-size: 125%">Assignment 2 Folder</p>
        </div>
       <div style="text-align: center; max-width: 200px; margin-left: 15px;">
-        <img class="w3-button w3-border w3-round  w3-animate-top" src="Assets/word_image.png" style="width: 100%; height: auto;">
+        <img class="w3-button w3-border w3-round  w3-animate-zoom" src="Assets/word_image.png" style="width: 100%; height: auto;">
         <p style="font-size: 125%">Group Project.docx</p>
       </div>
       <div style="text-align: center; max-width: 200px; margin-left: 15px;">
-        <img class="w3-button w3-border w3-round  w3-animate-top" src="Assets/html_image.png" style="width: 100%; height: auto;">
+        <img class="w3-button w3-border w3-round  w3-animate-zoom" src="Assets/html_image.png" style="width: 100%; height: auto;">
         <p style="font-size: 125%">Group Project.html</p>
       </div>
 	  <div style="text-align: center; max-width: 200px; margin-left: 15px;">
-      <a class="w3-button" href="#" style="width: auto; height: auto;  margin-top: 70px; margin-left: 50px; font-size: 11pt; border: solid #ccc; border-radius: 4px;">+&emsp;Add Files</a>
+      <a class="w3-button animate-right" href="#" style="width: auto; height: auto;  margin-top: 70px; margin-left: 50px; font-size: 11pt; border: solid #ccc; border-radius: 4px;">+&emsp;Add Files</a>
       </div>
 	</div> 
 	<br>
@@ -193,19 +193,19 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
       <img src="Assets/progress2.png" style="width:14.8%;"/>Due Date: 05/06/20 <i>(In 3 weeks)</i></h3>
 		<div style="display: flex">
       <div style="text-align: center; max-width: 200px;">
-        <img class="w3-button w3-border w3-round  w3-animate-top" src="Assets/folder_image.png"  style="width: 100%; height: auto;">
+        <img class="w3-button w3-border w3-round  w3-animate-zoom" src="Assets/folder_image.png"  style="width: 100%; height: auto;">
         <p style="font-size: 125%">Assignment 1 Folder</p>
       </div>
       <div style="text-align: center; max-width: 200px; margin-left: 15px;">
-        <img class="w3-button w3-border w3-round  w3-animate-top" src="Assets/powerpoint_image.png"  style="width: 100%; height: auto;">
+        <img class="w3-button w3-border w3-round  w3-animate-zoom" src="Assets/powerpoint_image.png"  style="width: 100%; height: auto;">
         <p style="font-size: 125%">Assignment 2.pptx</p>
       </div>    
       <div style="text-align: center; max-width: 200px; margin-left: 15px;">
-        <img class="w3-button w3-border w3-round  w3-animate-top" src="Assets/word_image.png"  style="width: 100%; height: auto;">
+        <img class="w3-button w3-border w3-round  w3-animate-zoom" src="Assets/word_image.png"  style="width: 100%; height: auto;">
         <p style="font-size: 125%">Group Project.docx</p>
       </div>
 	  <div style="text-align: center; max-width: 200px; margin-left: 15px;">
-      <a class="w3-button" href="#" style="width: auto; height: auto;  margin-top: 70px; margin-left: 50px; font-size: 11pt; border: solid #ccc; border-radius: 4px;">+&emsp;Add Files</a>
+      <a class="w3-button animate-right" href="#" style="width: auto; height: auto;  margin-top: 70px; margin-left: 50px; font-size: 11pt; border: solid #ccc; border-radius: 4px;">+&emsp;Add Files</a>
       </div>
     </div>
 	<br>
@@ -302,9 +302,9 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
 .share-file-fade-right
 {
   position:relative;
-  animation:animateright 0.4s
+  animation:shareanimateright 0.4s
 }
-@keyframes animateright
+@keyframes shareanimateright
 {
   from
   {
@@ -314,6 +314,37 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
   {
     right:-300px;opacity:0
   }
+}
+.animate-right
+{
+  position:relative;
+  animation:animateright 0.4s
+}
+@keyframes animateright
+{
+  from
+  {
+    right:-300px;opacity:0
+  } 
+  to
+  {
+    right:0px;opacity:1
+  }
+}
+.selection-blue
+{
+  font-weight: bold;
+  color: rgb(3, 126, 248)!important;
+  background-color: #3297FD33!important;
+}
+.hover-light-grey:hover, .hover-light-gray:hover 
+{
+  color:#000;
+  background-color:#f1f1f1;
+}
+a
+{
+  text-decoration: none;
 }
 </style>
 
@@ -336,10 +367,12 @@ function myFunc(id) {
   var x = document.getElementById(id);
   if (x.className.indexOf("w3-show") == -1) {
     x.className += " w3-show"; 
-    x.previousElementSibling.style.backgroundColor  = "#b3b3b3";
+    x.previousElementSibling.style.backgroundColor  = "#cac7c794";
+    x.previousElementSibling.style.fontWeight = "bold";
   } else { 
     x.className = x.className.replace(" w3-show", "");
-    x.previousElementSibling.style.backgroundColor = "white";
+    x.previousElementSibling.style.backgroundColor = null;
+    x.previousElementSibling.style.fontWeight = null;
   }
 }
 
@@ -352,10 +385,10 @@ function doShare(fileName) {
   }
   x = document.getElementsByClassName("test");
   for (i = 0; i < x.length; i++) {
-    x[i].className = x[i].className.replace(" w3-light-grey", "");
+    x[i].className = x[i].className.replace(" selection-blue", "");
   }
   document.getElementById(fileName).style.display = "block";
-  event.currentTarget.className += " w3-light-grey";
+  event.currentTarget.className += " selection-blue";
 }
 
 function displayDelay() {
