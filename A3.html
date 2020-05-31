@@ -54,14 +54,14 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
 
 <!-- Modal that pops up when you click on "Share File" -->
 <div id="id01" class="w3-modal" style="z-index:4">
-  <div id="shareFile" class="w3-modal-content w3-animate-left" style="border-radius: 4px;">
+  <div id="shareFile" class="modal-content w3-animate-left" style="border-radius: 4px;">
     <div class="w3-container w3-padding w3-blue" style="border-radius: 4px 4px 0px 0px;">
       <span onclick="document.getElementById('id01').style.display='none'" class="w3-button hover-blue w3-right w3-xxlarge" style="border-radius: 2px;" >
         <i class="fa fa-remove"></i>
       </span>
-      <h2>Share File</h2>
+      <h2 class="w3-margin-left">Share File</h2>
     </div>
-    <div class="w3-panel">
+    <div class="w3-panel w3-margin-left w3-margin-right">
       <label>To:</label>
       <input class="w3-input w3-border w3-margin-bottom" style="border-radius: 2px;" type="text" placeholder="Add recipients' emails">
       <label>From:</label>
@@ -383,6 +383,7 @@ a
   color:#ffffff!important;
   background-color:rgb(214, 44, 38)!important
 }
+.modal-content{margin:auto;background-color:#fff;position:relative;padding:0;outline:0;width:800px}
 </style>
 
 <script>
