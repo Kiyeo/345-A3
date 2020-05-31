@@ -23,7 +23,7 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
     Home
   </a>
   <a href="javascript:void(0)" class="w3-bar-item w3-dark-grey w3-button w3-hover-black w3-left-align" onclick="document.getElementById('id01').style.display='block'; document.getElementById('shareFile').style.display='block'">Share File <i class="w3-padding fa fa-pencil"></i></a>
-  <a id="myBtn" onclick="myFunc('Demo1')" href="javascript:void(0)" class="w3-bar-item w3-button"><i class="fa fa-inbox w3-margin-right"></i>Recent Files (3)<i class="fa fa-caret-down w3-margin-left"></i></a>
+  <a id="myBtn" onclick="myFunc('Demo1')" href="javascript:void(0)" class="w3-bar-item hover-light-grey"><i class="fa fa-inbox w3-margin-right"></i>Recent Files (3)<i class="fa fa-caret-down w3-margin-left"></i></a>
   <div id="Demo1" class="w3-hide w3-animate-left"></a>
     <a href="javascript:void(0)" class="w3-bar-item w3-border-bottom test hover-light-grey" onclick="doShare('File1');w3_close();">
       <div class="w3-container">
@@ -49,9 +49,9 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
       </div>
     </a>
   </div>
-  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-paper-plane w3-margin-right"></i>Shared Files</a>
-  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-hourglass-end w3-margin-right"></i>Draft Files</a>
-  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-trash w3-margin-right"></i>Trash</a>
+  <a href="#" class="w3-bar-item hover-light-grey"><i class="fa fa-paper-plane w3-margin-right"></i>Shared Files</a>
+  <a href="#" class="w3-bar-item hover-light-grey"><i class="fa fa-hourglass-end w3-margin-right"></i>Draft Files</a>
+  <a href="#" class="w3-bar-item hover-light-grey"><i class="fa fa-trash w3-margin-right"></i>Trash</a>
 </nav>
 
 <!-- Modal that pops up when you click on "Share File" -->
@@ -339,7 +339,7 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
 .hover-light-grey:hover, .hover-light-gray:hover 
 {
   color:#000;
-  background-color:#f1f1f1;
+  background-color:#f1f1f1b4;
 }
 </style>
 
@@ -362,7 +362,7 @@ function myFunc(id) {
   var x = document.getElementById(id);
   if (x.className.indexOf("w3-show") == -1) {
     x.className += " w3-show"; 
-    x.previousElementSibling.style.backgroundColor  = "#b3b3b3";
+    x.previousElementSibling.style.backgroundColor  = "#f1f1f1b4";
   } else { 
     x.className = x.className.replace(" w3-show", "");
     x.previousElementSibling.style.backgroundColor = "white";
