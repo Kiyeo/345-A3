@@ -91,24 +91,34 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
           <a >All Groups</a>
         </label>
 		  
-		<input id=btnRadio4 type="radio" name="control" checked>
+		    <input id=btnRadio4 type="radio" name="control" checked>
         <label class="w3-bar-item w3-button" style="border-radius: 2px 2px 2px 2px;" for="btnRadio4">
           <a >None</a>
         </label>
       </form>
 	  <div style="height: 10px;"></div>
       <textarea class="w3-input w3-border w3-margin-bottom" style="height:150px; border-radius: 0px 4px 4px 4px; resize: none;" placeholder="Add a comment here (optional)"></textarea>
-	  <form>
-		<input type="radio" name="control" checked="checked" id="option1">
-		  <label for="option1">Shared users can edit these files</label><br>
-		<input type="radio" name="control" checked="checked" id="option2">
-		  <label for="option2">Shared users can only view these files (read-only)</label>
-		</input><br><br>
-		<input type="checkbox" id="c1" name="C1">
-		<label for="c1">Alert me if there are any tracked changes</label><br>
-		<input type="checkbox" id="c2" name="C2">
-		<label for="c2">Notify me if someone opens a file</label><br>
-	  </form>
+      <div style="padding: 0px 5px 50px 5px">
+        <div class="w3-left">
+          <input type="radio" name="control" checked="checked" id="option1">
+            <label for="option1">Shared users can edit these files</label>
+          </input>
+          <br>
+          <input type="radio" name="control" checked="checked" id="option2">
+            <label for="option2">Shared users can only view these files (read-only)</label>
+          </input>
+        </div>
+        <div class="w3-right">
+          <input type="checkbox" id="c1" name="C1">
+            <label for="c1">Alert me if there are any tracked changes</label>
+          </input>
+          <br>
+          <input type="checkbox" id="c2" name="C2">
+            <label for="c2">Notify me if someone opens a file</label>
+          </input>
+          <br>
+        </div>
+      </div>
       <div class="w3-section">
         <a class="w3-button w3-red hover-red" onclick="document.getElementById('id01').style.display='none';" style="border-radius: 4px;">Cancel  <i class="fa fa-remove"></i></a>
         <a class="w3-button hover-blue w3-blue w3-right" onclick="document.getElementById('shareFile').className =
