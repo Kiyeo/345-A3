@@ -21,7 +21,7 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
   <a href="javascript:void(0)" class="w3-bar-item w3-border-bottom test hover-light-grey" onclick="doShare('home');" id="firstTab">
     <i class="fa fa-home w3-margin-right"></i>Home</a>
   <a href="javascript:void(0)" class="w3-bar-item w3-blue hover-blue w3-left-align" onclick="document.getElementById('id01').style.display='block'; document.getElementById('shareFile').style.display='block'"><i class="fa fa-pencil w3-margin-right"></i><b>Share File</b></a>
-  <a id="myBtn" onclick="doShare('Demo1')" href="javascript:void(0)" class="w3-bar-item test hover-light-grey"><i class="fa fa-inbox w3-margin-right"></i>Recent Files (3)<i class="fa fa-caret-down w3-margin-left"></i></a>
+  <a id="myBtn" onclick="doShare('Demo1'); openHome()" href="javascript:void(0)" class="w3-bar-item test hover-light-grey"><i class="fa fa-inbox w3-margin-right"></i>Recent Files (3)<i class="fa fa-caret-down w3-margin-left"></i></a>
   <div id="Demo1" class="w3-hide w3-animate-left"></a>
     <a href="javascript:void(0)" class="w3-bar-item w3-border-bottom test hover-light-grey" onclick="doShare('File1');w3_close();">
       <div class="w3-container">
@@ -461,6 +461,12 @@ function displayDelay() {
     document.getElementById('shareFile').style.display='none'
       document.getElementById('id02').style.display='block'
     }, 350);
+}
+
+function openHome()
+{
+  var openTab = document.getElementById("home");
+  openTab.style.display= "block";
 }
 </script>
 
