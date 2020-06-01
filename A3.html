@@ -20,8 +20,8 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
   class="w3-bar-item w3-button w3-hide-large w3-large">Close <i class="fa fa-remove"></i></a>
   <a href="javascript:void(0)" class="w3-bar-item w3-border-bottom test hover-light-grey" onclick="doShare('home');" id="firstTab">
     <i class="fa fa-home w3-margin-right"></i>Home</a>
-  <a href="javascript:void(0)" class="w3-bar-item w3-light-blue w3-button w3-hover-blue w3-left-align" onclick="document.getElementById('id01').style.display='block'; document.getElementById('shareFile').style.display='block'"><i class="fa fa-pencil w3-margin-right"></i><b>Share File</b></a>
-  <a id="myBtn" onclick="myFunc('Demo1')" href="javascript:void(0)" class="w3-bar-item hover-light-grey"><i class="fa fa-inbox w3-margin-right"></i>Recent Files (3)<i class="fa fa-caret-down w3-margin-left"></i></a>
+  <a href="javascript:void(0)" class="w3-bar-item w3-blue hover-blue w3-left-align" onclick="document.getElementById('id01').style.display='block'; document.getElementById('shareFile').style.display='block'"><i class="fa fa-pencil w3-margin-right"></i><b>Share File</b></a>
+  <a id="myBtn" onclick="doShare('Demo1')" href="javascript:void(0)" class="w3-bar-item test hover-light-grey"><i class="fa fa-inbox w3-margin-right"></i>Recent Files (3)<i class="fa fa-caret-down w3-margin-left"></i></a>
   <div id="Demo1" class="w3-hide w3-animate-left"></a>
     <a href="javascript:void(0)" class="w3-bar-item w3-border-bottom test hover-light-grey" onclick="doShare('File1');w3_close();">
       <div class="w3-container">
@@ -54,14 +54,14 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
 
 <!-- Modal that pops up when you click on "Share File" -->
 <div id="id01" class="w3-modal" style="z-index:4">
-  <div id="shareFile" class="w3-modal-content w3-animate-left" style="border-radius: 4px;">
-    <div class="w3-container w3-padding w3-light-blue" style="border-radius: 4px 4px 0px 0px;">
-      <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-right w3-xxlarge" style="border-radius: 2px;" >
+  <div id="shareFile" class="modal-content w3-animate-left" style="border-radius: 4px;">
+    <div class="w3-container w3-padding w3-blue" style="border-radius: 4px 4px 0px 0px;">
+      <span onclick="document.getElementById('id01').style.display='none'" class="w3-button hover-blue w3-right w3-xxlarge" style="border-radius: 2px;" >
         <i class="fa fa-remove"></i>
       </span>
-      <h2>Share File</h2>
+      <h2 class="w3-margin-left">Share File</h2>
     </div>
-    <div class="w3-panel">
+    <div class="w3-panel w3-margin-left w3-margin-right">
       <label>To:</label>
       <input class="w3-input w3-border w3-margin-bottom" style="border-radius: 2px;" type="text" placeholder="Add recipients' emails">
       <label>From:</label>
@@ -76,42 +76,52 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
 	  <div style="height: 5px;"></div>
       <form action="/action_page.php">
         <input id=btnRadio1 type="radio" name="control">
-        <label class="w3-bar-item w3-button" style="border-radius: 2px 2px 2px 2px;" for="btnRadio1">
+        <label class="w3-bar-item w3-button hover-file-group-grey" style="border-radius: 2px 2px 2px 2px;" for="btnRadio1">
           <a>COMPSCI345</a>
         </label>
 
         <input id=btnRadio2 type="radio" name="control">
-        <label class="w3-bar-item w3-button" style="border-radius: 2px 2px 2px 2px;" for="btnRadio2">
+        <label class="w3-bar-item w3-button hover-file-group-grey" style="border-radius: 2px 2px 2px 2px;" for="btnRadio2">
           
           <a>COMPSCI373</a>
         </label>
         
         <input id=btnRadio3 type="radio" name="control">
-        <label class="w3-bar-item w3-button" style="border-radius: 2px 2px 2px 2px;" for="btnRadio3">
+        <label class="w3-bar-item w3-button hover-file-group-grey" style="border-radius: 2px 2px 2px 2px;" for="btnRadio3">
           <a >All Groups</a>
         </label>
 		  
-		<input id=btnRadio4 type="radio" name="control" checked>
-        <label class="w3-bar-item w3-button" style="border-radius: 2px 2px 2px 2px;" for="btnRadio4">
+		    <input id=btnRadio4 type="radio" name="control" checked>
+        <label class="w3-bar-item w3-button hover-file-group-grey" style="border-radius: 2px 2px 2px 2px;" for="btnRadio4">
           <a >None</a>
         </label>
       </form>
 	  <div style="height: 10px;"></div>
       <textarea class="w3-input w3-border w3-margin-bottom" style="height:150px; border-radius: 0px 4px 4px 4px; resize: none;" placeholder="Add a comment here (optional)"></textarea>
-	  <form>
-		<input type="radio" name="control" checked="checked" id="option1">
-		  <label for="option1">Shared users can edit these files</label><br>
-		<input type="radio" name="control" checked="checked" id="option2">
-		  <label for="option2">Shared users can only view these files (read-only)</label>
-		</input><br><br>
-		<input type="checkbox" id="c1" name="C1">
-		<label for="c1">Alert me if there are any tracked changes</label><br>
-		<input type="checkbox" id="c2" name="C2">
-		<label for="c2">Notify me if someone opens a file</label><br>
-	  </form>
+      <div style="padding: 0px 5px 50px 5px">
+        <div class="w3-left">
+          <input type="radio" name="control" checked="checked" id="option1">
+            <label for="option1">Shared users can edit these files</label>
+          </input>
+          <br>
+          <input type="radio" name="control" checked="checked" id="option2">
+            <label for="option2">Shared users can only view these files (read-only)</label>
+          </input>
+        </div>
+        <div class="w3-right">
+          <input type="checkbox" id="c1" name="C1">
+            <label for="c1">Alert me if there are any tracked changes</label>
+          </input>
+          <br>
+          <input type="checkbox" id="c2" name="C2">
+            <label for="c2">Notify me if someone opens a file</label>
+          </input>
+          <br>
+        </div>
+      </div>
       <div class="w3-section">
-        <a class="w3-button w3-light-grey" onclick="document.getElementById('id01').style.display='none';" style="border-radius: 4px;">Cancel  <i class="fa fa-remove"></i></a>
-        <a class="w3-button w3-light-blue w3-right" onclick="document.getElementById('shareFile').className =
+        <a class="w3-button w3-red hover-red" onclick="document.getElementById('id01').style.display='none';" style="border-radius: 4px;">Cancel  <i class="fa fa-remove"></i></a>
+        <a class="w3-button hover-blue w3-blue w3-right" onclick="document.getElementById('shareFile').className =
         document.getElementById('shareFile').className.replace(' w3-animate-left', ' share-file-fade-right'); displayDelay()" style="border-radius: 4px;">Share  <i class="fa fa-paper-plane"></i></a> 
       </div>    
     </div>
@@ -312,19 +322,27 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
 }
 #btnRadio1:checked + label
 {
-  background-color: lightgrey;
+  font-weight: bold;
+  color: rgb(3, 126, 248)!important;
+  background-color: #3297FD33!important;
 }
 #btnRadio2:checked + label
 {
-  background-color: lightgrey;
+  font-weight: bold;
+  color: rgb(3, 126, 248)!important;
+  background-color: #3297FD33!important;
 }
 #btnRadio3:checked + label
 {
-  background-color: lightgrey;
+  font-weight: bold;
+  color: rgb(3, 126, 248)!important;
+  background-color: #3297FD33!important;
 }
 #btnRadio4:checked + label
 {
-  background-color: lightgrey;
+  font-weight: bold;
+  color: rgb(3, 126, 248)!important;
+  background-color: #3297FD33!important;
 }
 .share-file-fade-right
 {
@@ -369,16 +387,32 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
   color:#000;
   background-color:#f1f1f1;
 }
+.hover-file-group-grey:hover, .hover-file-group-gray:hover 
+{
+  color:#000 !important;
+  background-color:#f1f1f1 !important;
+}
 a
 {
   text-decoration: none;
 }
+.hover-blue:hover
+{
+  color:#ffffff!important;
+  background-color:rgb(35, 127, 233) !important;
+}
+.hover-red:hover
+{
+  color:#ffffff!important;
+  background-color:rgb(214, 44, 38)!important
+}
+.modal-content{margin:auto;background-color:#fff;position:relative;padding:0;outline:0;width:800px}
 </style>
 
 <script>
 
-var openInbox = document.getElementById("myBtn");
-openInbox.click();
+// var openInbox = document.getElementById("myBtn");
+// openInbox.click();
 
 function w3_open() {
   document.getElementById("mySidebar").style.display = "block";
